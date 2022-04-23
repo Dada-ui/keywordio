@@ -1,0 +1,48 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block title %} Library Management System {% endblock %}
+{% block css %}
+{% endblock %}
+{% block body %}
+<div class="p-4 bg-light">
+    <div class="container-fluid py-3">
+      <h2 class="fw-bold text-center">Welcome to Library Management System</h2>
+    </div>
+    <style>
+        div.relative {
+          position: relative;
+          left: 280px;
+        }
+      </style>
+      <div class="relative col-sm-6 mx-5 mb-2">
+        <hr>
+        <div class="container form-control text-center my-5">
+          <div class="container my-3">
+            <b><h3>Please choose login</b></h3>
+            <br>
+
+            <div class="row justify-content-evenly">
+              <div class="col-5">
+                <h5>
+                  <div class="col">
+                    <img src="{% static 'admin.png' %}" width="25%" height="30%" alt=""><br><br>
+                      <a class="btn btn-outline-success btn-lg" style="text-align:center" href="/admin_login/">Admin</a>
+                  </div>
+                </h5>
+              </div>
+              - ( or ) -
+              <div class="col-5">
+                <h5>
+                  <div class="col">
+                    <img src="{% static 'students.png' %}" width="25%" height="30%" alt=""><br><br>
+                    <a class="btn btn-outline-success btn-lg" style="text-align:center" href="/student_login/">Student</a>
+                  </div>
+                </h5>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+</div>
+{% endblock %}
